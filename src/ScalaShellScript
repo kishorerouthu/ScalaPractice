@@ -1,0 +1,29 @@
+#!/bin/sh
+exec scala "$0" "$@"
+!#
+
+println("Hello, " + args(0) + "!")
+
+
+
+ Running scala scripts without typing "scala" on unix using "pound-bang" syntax (#!/bin/sh)
+
+ If you’re on some flavor of Unix, you can run a Scala script as a shell script
+ by prepending a “pound bang” directive at the top of the file.
+ For example, type the following into a file named helloarg :
+
+#!/bin/sh
+exec scala "$0" "$@"
+!#
+// Say hello to the first argument
+//println("Hello, "+ args(0) +"!")
+//The initial #!/bin/sh must be the very first line in the file. Once you set its
+ // execute permission:
+ // $ chmod +x helloarg
+ // You can run the Scala script as a shell script by simply saying:
+ // $ ./helloarg globe
+
+
+
+
+
